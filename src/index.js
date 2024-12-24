@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App"; // Importa el componente raíz
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import CartProvider from './context/CartContext'; // Importamos el CartProvider
 
-// Crea el punto de conexión con el DOM
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// Renderiza tu aplicación
-root.render(
-<React.StrictMode>
-    <App />
-</React.StrictMode>
+ReactDOM.render(
+    <React.StrictMode>
+        <CartProvider>
+            <App />
+        </CartProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
